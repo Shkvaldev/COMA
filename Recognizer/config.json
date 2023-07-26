@@ -1,0 +1,5 @@
+{
+    "name": "Recognizer",
+    "desc": "Simple VOSK recognizer",
+    "version": "0.0.1"
+}

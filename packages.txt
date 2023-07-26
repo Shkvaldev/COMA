@@ -1,0 +1,8 @@
+python
+python-pip
+ffmpeg
+htop
+rhvoice
+rhvoice-language-russian
+rhvoice-language-english
+rhvoice-voice-anna

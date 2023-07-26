@@ -1,0 +1,4 @@
+Cpython
+vosk
+pydub
+aiogram

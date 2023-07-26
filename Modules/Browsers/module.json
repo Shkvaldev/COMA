@@ -1,0 +1,18 @@
+{
+    "name": "Browser",
+    "desc": "Browser launcher module",
+    "triggers": {
+        "открой браузер": [
+            {"apiFunc": "say", "args": ["Открываю браузер!"]},
+            {"apiFunc": "openBrowser", "args": []}
+        ],
+        "закрой браузер": [
+            {"apiFunc": "say", "args": ["Закрываю браузер!"]},
+            {"apiFunc": "closeBrowser", "args": []}
+        ],
+        "найди": [
+            {"apiFunc": "say", "args": ["Ищу!"]},
+            {"apiFunc": "engoogle", "args": ["$speech"]}
+        ]
+    }
+}

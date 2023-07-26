@@ -1,0 +1,5 @@
+{
+    "name": "Speaker",
+    "desc": "Simple RHVoice-driven shell speaker",
+    "version": "0.0.1"
+}

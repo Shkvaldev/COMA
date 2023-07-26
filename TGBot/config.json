@@ -1,0 +1,5 @@
+{
+    "name": "TGBot",
+    "desc": "Simple telegram bot for receiving user input",
+    "version": "0.0.1"
+}

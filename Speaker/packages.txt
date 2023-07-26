@@ -1,0 +1,3 @@
+rhvoice
+rhvoice-language-russian
+rhvoice-voice-anna
