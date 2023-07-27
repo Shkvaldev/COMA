@@ -25,7 +25,7 @@ sudo pacman -Sy $(cat packages.txt)
 ```
 3. Install all _python_ dependences:
 ```shell
-pip install -r requirements.txt
+pip install -r requirements.txt --break-system-packages
 ```
 4. Run the server:
 ```shell
