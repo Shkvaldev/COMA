@@ -22,6 +22,7 @@ cd COMA
 2. Install all _system_ dependences:
 ```shell
 sudo pacman -Sy $(cat packages.txt)
+yay -S python-keyboard # only for local work
 ```
 3. Install all _python_ dependences:
 ```shell

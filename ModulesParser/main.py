@@ -46,7 +46,7 @@ class ModulesParser:
     def buildActionBundle(self, actions):
         actionBundle = []
         for action in actions:
-            actionBundle.append(Action(getattr(self.core.api, action["apiFunc"]), action["args"]))
+            actionBundle.append(Action(getattr(self.core.sdk, action["sdkFunc"]), action["args"]))
         return actionBundle
 
     # This method checks if there is trigger in speech and perform it if yes

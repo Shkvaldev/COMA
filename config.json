@@ -6,5 +6,6 @@
     "rate": 125,
     "browserRun": "put your browser here, ex: chromium --incognito",
     "terminalRun": "put your texrminal here, ex: xfce4-terminal",
+    "useTelegram": false,
     "telegramBotToken": "put your token here"
 }

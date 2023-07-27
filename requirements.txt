@@ -1,4 +1,5 @@
 Cpython
 vosk
 pydub
+asyncio
 aiogram

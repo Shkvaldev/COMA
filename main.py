@@ -12,8 +12,7 @@ from pydub.playback import play
 from Speaker.main import Speaker
 from Recognizer.main import Recognizer
 from ModulesParser.main import ModulesParser
-from API.main import API
-from TGBot.main import TGBot
+from SDK.main import SDK
 
 
 def importConfig(confPath):
@@ -21,35 +20,48 @@ def importConfig(confPath):
         config_data = json.loads(config.read())
         config.close()
         return config_data
-'''
-def playResponse(response):
-    song = AudioSegment.from_wav(response)
-    play(song+18)
-    os.remove(response)
-    print("[*] Played response")
-'''
+
 class COMA:
     def __init__(self, configPath):
         self.config = importConfig(configPath)
         print("[*] Config loading ...")
         pprint(self.config)
+
         print("[*] Speaker loading ...")
         self.speaker = Speaker(self)
+
         print("[*] Recognizer loading ...")
         self.recognizer = Recognizer(self)
-        print("[*] API loading ...")
-        self.api = API(self)
+
+        print("[*] SDK loading ...")
+        self.sdk = SDK(self)
+
         print("[*] ModulesParser loading ...")
         self.modulesParser = ModulesParser(self)
-        print("[*] TGBot loading ...")
-        self.bot = TGBot(self)
-        self.bot.run()
-        #playResponse(self.speaker.say("Привет, Хозяин!"))
+
+        if self.config["useTelegram"]:
+
+            from TGBot.main import TGBot
+
+            print("[*] TGBot loading ...")
+            self.bot = TGBot(self)
+            self.bot.run()
+        else:
+
+            from LocalAPI.main import LocalAPI
+
+            print("[*] LocalAPI loading ...")
+            self.localAPI = LocalAPI(self)
+
+            try:
+                self.localAPI.run()
+            except KeyboardInterrupt:
+                del(self)
     
-    def playResponse(response):
-        song = AudioSegment.from_wav(response)
+    def playResponse(responsePath):
+        song = AudioSegment.from_wav(responsePath)
         play(song+18)
-        os.remove(response)
+        os.remove(responsePath)
         print("[*] Played response")
 
 if __name__ == "__main__":

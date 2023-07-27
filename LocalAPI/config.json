@@ -1,0 +1,5 @@
+{
+    "name": "LocalAPI",
+    "desc": "Simple file based API for receiving user input",
+    "version": "0.0.1"
+}

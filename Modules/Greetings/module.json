@@ -3,17 +3,17 @@
     "desc": "Simple module for opening or closing browser",
     "triggers": {
         "привет": [
-            {"apiFunc": "say", "args": ["Приветствую!"]},
-            {"apiFunc": "say", "args": ["Как ваши дела?"]}
+            {"sdkFunc": "say", "args": ["Приветствую!"]},
+            {"sdkFunc": "say", "args": ["Как ваши дела?"]}
         ],
         "пока": [
-            {"apiFunc": "say", "args": ["До встречи!"]}
+            {"sdkFunc": "say", "args": ["До встречи!"]}
         ],
         "повтори": [
-            {"apiFunc": "say", "args": ["$speech"]}
+            {"sdkFunc": "say", "args": ["$speech"]}
         ],
         "у меня все хорошо": [
-            {"apiFunc": "say", "args": ["Это просто замечательно!"]}
+            {"sdkFunc": "say", "args": ["Это просто замечательно!"]}
         ]
     }
 }

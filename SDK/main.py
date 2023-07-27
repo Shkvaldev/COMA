@@ -8,14 +8,14 @@ import subprocess as sp
 from pydub import AudioSegment
 from pydub.playback import play
 
-def playResponse(response):
-    song = AudioSegment.from_wav(response)
+def playResponse(responsePath):
+    song = AudioSegment.from_wav(responsePath)
     play(song+18)
-    os.remove(response)
+    os.remove(responsePath)
     print("[*] Played response")
 
 
-class API:
+class SDK:
     def __init__(self, core):
         self.core = core
 
